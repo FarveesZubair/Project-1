@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Detail Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="course-header">
+        <h1 id="course-title">Learn Web Development</h1>
+        <button id="enroll-btn">Enroll Now</button>
+    </header>
+
+    <section class="course-overview">
+        <h2>Course Overview</h2>
+        <ul>
+            <li><strong>Skill Level:</strong> Beginner</li>
+            <li><strong>Estimated Duration:</strong> 12 hours</li>
+            <li><strong>Number of Videos:</strong> 20</li>
+            <li><strong>Average Rating:</strong> 4.8/5</li>
+        </ul>
+    </section>
+
+    <section class="video-list">
+        <h2>Video List</h2>
+        <div class="video-container">
+            <div class="video-item">
+                <h3>Video 1: Introduction to HTML</h3>
+                <p>Duration: 15 mins | Views: 12,000</p>
+                <label>
+                    <input type="checkbox" class="completion-checkbox"> Mark as Completed
+                </label>
+            </div>
+            <!-- Repeat similar video-item divs for other videos -->
+        </div>
+    </section>
+
+    <section class="video-player">
+        <h2>Video Player</h2>
+        <iframe 
+            id="youtube-player" 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/VIDEO_ID" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+        <div class="video-summary">
+            <h3>AI-Generated Summary:</h3>
+            <p>This video introduces the basics of HTML, including elements, tags, and structure.</p>
+        </div>
+    </section>
+
+    <section class="notes-tools">
+        <h2>Notes & Tools</h2>
+        <textarea id="custom-notes" placeholder="Add your notes here..."></textarea>
+        <button id="save-notes">Save Notes</button>
+        <div class="ai-questions">
+            <h3>AI-Generated Questions:</h3>
+            <ul>
+                <li>What are the main elements of an HTML document?</li>
+                <li>Explain the difference between a tag and an element.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="additional-features">
+        <div class="progress-tracker">
+            <h2>Progress Tracker</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p>Completion: <span id="completion-percentage">0%</span></p>
+        </div>
+        <div class="job-seeker-tips">
+            <h2>Job-Seeker Tips</h2>
+            <p>Web developers are in high demand. Start with front-end roles and build your portfolio!</p>
+        </div>
+        <div class="rate-course">
+            <h2>Rate this Course</h2>
+            <select id="rating">
+                <option value="">-- Select Rating --</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Bad</option>
+            </select>
+            <button id="submit-rating">Submit Rating</button>
+        </div>
+    </section>
+
+    <footer>
+        <button id="download-certificate">Download Certificate</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
